@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-11-11 10:49:59 by Eclipse SUMO GUI Version 1.24.0
+<!-- generated on 2025-11-11 11:11:14 by Eclipse SUMO GUI Version 1.24.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="/home/user/sumoproject/src/main/config/network.net.xml"/>
-        <route-files value="/home/user/sumoproject/src/main/config/routes.xml"/>
-        <additional-files value="/home/user/sumoproject/src/main/config/vehicles.xml,/home/user/sumoproject/src/main/config/loops.xml,/home/user/sumoproject/src/main/config/tls.add.xml"/>
+        <net-file value="/home/user/sumoproject/sumoproject/src/main/config/network.net.xml"/>
+        <route-files value="/home/user/sumoproject/sumoproject/src/main/config/routes.xml"/>
+        <additional-files value="/home/user/sumoproject/sumoproject/src/main/config/vehicles.xml,/home/user/sumoproject/sumoproject/src/main/config/loops.xml,/home/user/sumoproject/sumoproject/src/main/config/tls.add.xml"/>
     </input>
 
     <time>
@@ -14,12 +14,12 @@
     </time>
 
     <traci_server>
-        <remote-port value="34981"/>
+        <remote-port value="41511"/>
         <num-clients value="1"/>
     </traci_server>
 
     <gui_only>
-        <gui-settings-file value="/home/user/sumoproject/src/main/config/settings.xml"/>
+        <gui-settings-file value="/home/user/sumoproject/sumoproject/src/main/config/settings.xml"/>
         <start value="true"/>
     </gui_only>
 
@@ -27,6 +27,8 @@
 -->
 
 <detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
-    <interval begin="0.00" end="77.80" id="loop0" nVehContrib="23" flow="1064.27" occupancy="10.24" speed="13.04" harmonicMeanSpeed="12.99" length="4.50" nVehEntered="23"/>
-    <interval begin="0.00" end="77.80" id="loop1" nVehContrib="22" flow="1017.99" occupancy="9.73" speed="13.17" harmonicMeanSpeed="13.08" length="4.50" nVehEntered="22"/>
+    <interval begin="0.00" end="300.00" id="loop0" nVehContrib="102" flow="1224.00" occupancy="25.81" speed="10.50" harmonicMeanSpeed="5.93" length="4.50" nVehEntered="102"/>
+    <interval begin="0.00" end="300.00" id="loop1" nVehContrib="94" flow="1128.00" occupancy="23.98" speed="10.41" harmonicMeanSpeed="5.88" length="4.50" nVehEntered="94"/>
+    <interval begin="300.00" end="566.60" id="loop0" nVehContrib="97" flow="1309.83" occupancy="49.56" speed="6.32" harmonicMeanSpeed="3.30" length="4.50" nVehEntered="97"/>
+    <interval begin="300.00" end="566.60" id="loop1" nVehContrib="99" flow="1336.83" occupancy="51.69" speed="6.41" harmonicMeanSpeed="3.23" length="4.50" nVehEntered="99"/>
 </detector>

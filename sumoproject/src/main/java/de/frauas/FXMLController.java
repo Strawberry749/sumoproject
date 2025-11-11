@@ -31,7 +31,7 @@ public class FXMLController implements Initializable {
 
         //Setting variables for the connection
 		String sumo_bin = "sumo-gui";
-		String sumo_config = "/home/user/SumoProject/sumoproject/src/main/config/config.sumocfg";
+		String sumo_config = "/home/user/sumoproject/sumoproject/src/main/config/config.sumocfg";
 		//Setting variable for the length of a simulation step
 		double step_length = 0.1;
 		int vehicle_num;
