@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="360.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+  <children>
+    <MenuBar prefHeight="80.0" prefWidth="671.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Restart Simulation" />
+                  <MenuItem mnemonicParsing="false" text="Export CSV" />
+                  <MenuItem mnemonicParsing="false" text="Export PDF" />
+            <MenuItem mnemonicParsing="false" onAction="#handleStopSimulation" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="How to" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="545.0" prefWidth="799.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Slider blockIncrement="1.0" layoutX="453.0" layoutY="61.0" max="30.0" showTickLabels="true" showTickMarks="true" />
+            <Label alignment="CENTER" layoutX="449.0" layoutY="32.0" prefHeight="17.0" prefWidth="148.0" text="Traffic Light Control">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="22.0" layoutY="67.0" mnemonicParsing="false" onAction="#openMapView" prefHeight="25.0" prefWidth="190.0" text="Map View" />
+            <Button layoutX="22.0" layoutY="28.0" mnemonicParsing="false" onAction="#openInjectVehicle" prefHeight="25.0" prefWidth="190.0" text="Inject Vehicle" />
+            <Button layoutX="250.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleStartSimulation" prefHeight="56.0" prefWidth="140.0" text="Start Simulation">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="432.0" layoutY="118.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="190.0" text="Advanced Traffic Light Control" />
+            <Button layoutX="24.0" layoutY="106.0" mnemonicParsing="false" onAction="#openStatistics" prefHeight="25.0" prefWidth="190.0" text="Statistics" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
