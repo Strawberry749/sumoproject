@@ -2,4 +2,7 @@
 
 <routes>
 	<route id="r1" edges="gneE0 gneE1"/>
+	<routes>
+    <route id="r2" edges="gneE2 gneE3"/> 
+</routes>
 </routes>
