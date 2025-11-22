@@ -1,3 +1,5 @@
+//Controller for the Main Window
+
 package main;
 
 import javafx.event.ActionEvent;

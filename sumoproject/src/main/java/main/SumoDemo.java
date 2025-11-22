@@ -77,6 +77,7 @@ public class SumoDemo {
         
     }
 
+    //Not needed because implemented into SceneController.java
     // Main method creates a SumoDemo object and calls connect() method.
     /*public static void main(String[] args) throws Exception{
         SumoDemo dem1 = new SumoDemo();

@@ -1,3 +1,5 @@
+//Controles the functions for the Window InjectVehicle
+
 package main;
 
 import javafx.event.ActionEvent;
@@ -9,6 +11,7 @@ import javafx.stage.Stage;
 
 public class InjectVehicleController {
 	
+	//Different Elements of the InjectVehicle Window
 	@FXML private ChoiceBox<String> routeChoiceBox;
 	@FXML private ChoiceBox<String> modelChoiceBox;
 	@FXML private ChoiceBox<String> colorChoiceBox;
