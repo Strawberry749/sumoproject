@@ -1,3 +1,5 @@
+import java.io.File;
+import java.nio.file.Paths;
 
 import de.tudresden.sumo.cmd.Trafficlight;
 import de.tudresden.sumo.cmd.Vehicle;
@@ -20,7 +22,13 @@ public class SumoDemo {
 
     public SumoDemo(){
         this.sumo_bin = "sumo-gui";
-        this.sumo_config = "src/main/config/config.sumocfg";
+
+        // Get relative path with correct separators for windows and unix.
+        String rel_cfg_path = "sumoproject" + File.separator + "src" + File.separator + "main" + File.separator + "config" + File.separator + "config.sumocfg";
+        // Turn it into an absolute path
+        String abs_cfg_path_string = Paths.get(rel_cfg_path).toAbsolutePath().toString();
+
+        this.sumo_config = abs_cfg_path_string;
         this.conn = new SumoTraciConnection(this.sumo_bin, this.sumo_config);
     }
 
