@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Java Project Milestone 1}
+\author{\textit{Insert names of group here}}
+\date{Wintersemester 2025/26}
+
+\begin{document}
+
+\maketitle
+
+\section{Intruduction}
+
+The program uses the TraaS API to connect to the SUMO Traffic Simulation and display the simulation inside a GUI. The programming language used is Java. The program has the task of connecting to a running SUMO simulation, to step through the simulation, and to render the simulation in a GUI and allow user control. \newline
+
+\section{Organizational}
+For the creation of the project, our group is split into two groups with 3 people each. One group works on the frontend and the other on the backend implementation. For the coordination between both groups and all members of the group, we meet every week at least one time and use the App Discord for communication between these meetings. For sharing our code and version control, we use our own GitHub Repository.
+
+\section{Technology Stack}
+\subsection{Frontend \& GUI}
+\begin{enumerate}
+    \item \textbf{UI Framework:} JavaFX 13
+    \item \textbf{UI Desing Tool:} SceneBuilder 25.0.0 (Gluon)
+    \item \textbf{Layout Format:} XML
+    \item \textbf{Styling:} CSS (JavaFX components)
+\end{enumerate}
+
+\subsection{Application}
+\begin{enumerate}
+    \item \textbf{Core language:} Java 25
+    \item \textbf{Build Tool:} Maven
+    \item \textbf{Dependency Manager:} Maven POM
+    \item \textbf{Version Control:} Git / Github
+\end{enumerate}
+
+\subsection{Backend}
+\begin{enumerate}
+    \item \textbf{Simulation Engine:} SUMO 1.24.0
+    \item \textbf{API:} TraaS 1.1
+\end{enumerate}
+
+\section{Timeline}
+\title{\textbf{Till 23.11.:}} 
+\begin{itemize}
+    \item Working connection to SUMO (stepping through the simulation)
+    \item First Version of finished GUI Layout
+    \item Class Diagram for the TraaS Wrapper
+\end{itemize}
+\title{\textbf{Till 30.11.:}}
+\begin{itemize}
+    \item Main functionalities of the TraaS Wrapper
+    \item Basic interaction between GUI and SUMO (Start, Stop, etc.)
+    \item Rendering the static map in the GUI
+\end{itemize}
+\title{\textbf{Till 07.12.:}}
+\begin{itemize}
+    \item Interactive Elements of the Wrapper (Vehicle injection, Traffic Light control)
+    \item Rendering dynamic Elements in the GUI (Cars, Traffic Lights) 
+    \item Full interaction with GUI (Map Zoom, etc.)
+\end{itemize}
+\title{\textbf{Till 14.12.:}}
+\begin{itemize}
+    \item Implement at least one test scenario
+    \item Implement batch injection for stress testing
+    \item write a first draft for the User Guide
+    \item Full documentation of the code 
+\end{itemize}
+\title{\textbf{Till 04.01.:}}
+\begin{itemize}
+    \item Vehicle Grouping and Filtering
+    \item Traffic light adaptation
+    \item Statistics and Analytics (allow data export)
+    \item Complete GUI with map, controls, statistics
+\end{itemize}
+\title{\textbf{Till 11.01.:}}
+\begin{itemize}
+    \item \textbf{Full documentation}
+    \begin{itemize}
+        \item Updated and finished user guide
+        \item Final code documentation 
+    \end{itemize}
+    \item \textbf{Final application (additional features could be added)}
+\end{itemize}
+
+\section{Architecture Diagram}
+\textit{TODO: add diagram here}
+
+\section{Class Design for TraaS wrapper}
+\textit{TODO: add UML Diagram here}
+
+\section{GUI Mockups}
+\textit{TODO: add pictures of GUI Layout here}
+
+\section{Git Repository Setup}
+The repository can be found on Github. Every member of the group is added as a contributor.
+\textit{TODO: add link here}
+
+\end{document}
