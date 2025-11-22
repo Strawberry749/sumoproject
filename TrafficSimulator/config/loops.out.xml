@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-18 11:25:18 by Eclipse SUMO GUI Version 1.24.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/user/sumoproject/sumoproject/src/main/config/network.net.xml"/>
+        <route-files value="/home/user/sumoproject/sumoproject/src/main/config/routes.xml"/>
+        <additional-files value="/home/user/sumoproject/sumoproject/src/main/config/vehicles.xml,/home/user/sumoproject/sumoproject/src/main/config/loops.xml,/home/user/sumoproject/sumoproject/src/main/config/tls.add.xml"/>
+    </input>
+
+    <time>
+        <step-length value="0.1"/>
+    </time>
+
+    <traci_server>
+        <remote-port value="45247"/>
+        <num-clients value="1"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="/home/user/sumoproject/sumoproject/src/main/config/settings.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="240.30" id="loop0" nVehContrib="87" flow="1303.37" occupancy="18.94" speed="11.21" harmonicMeanSpeed="8.60" length="4.50" nVehEntered="87"/>
+    <interval begin="0.00" end="240.30" id="loop1" nVehContrib="78" flow="1168.54" occupancy="17.72" speed="11.22" harmonicMeanSpeed="8.30" length="4.50" nVehEntered="79"/>
+</detector>
