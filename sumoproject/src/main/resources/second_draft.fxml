@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="691.0" prefWidth="1199.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.SceneController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Restart Simulation" />
+            <Menu mnemonicParsing="false" text="Export...">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="PDF" />
+                        <MenuItem mnemonicParsing="false" text="CSV" />
+                     </items></Menu>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+                  <MenuItem mnemonicParsing="false" text="How To" />
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.19381787802840433, 0.8295739348370927" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+          <children>
+            <Label alignment="CENTER" layoutX="71.0" layoutY="20.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Dashboard" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <Button layoutX="-1.0" layoutY="64.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="100.0" prefWidth="230.0" text="Start Simulation" />
+                  <Button layoutX="-1.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" text="Inject Vehicle" />
+                  <Slider blockIncrement="2.0" layoutY="364.0" max="30.0" min="1.0" prefHeight="100.0" prefWidth="230.0" showTickLabels="true" showTickMarks="true" />
+                  <Button layoutY="464.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="230.0" text="Advanced Traffic Light Control" />
+                  <Button layoutY="264.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="230.0" text="Step +" />
+                  <Label layoutX="61.0" layoutY="427.0" text="Traffic Light Control" />
+                  <Button layoutX="-1.0" layoutY="164.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="230.0" text="Pause/Unpause Simulation" />
+                  <Button layoutY="564.0" mnemonicParsing="false" onAction="#handleInject" prefHeight="100.0" prefWidth="230.0" text="Inject Vehicle" />
+          </children>
+        </AnchorPane>
+        <ScrollPane>
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="605.0" prefWidth="750.0">
+              <children>
+                        <TabPane layoutX="-5.0" layoutY="2.0" prefHeight="655.0" prefWidth="755.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Map View">
+                                 <content>
+                                    <Canvas height="632.0" width="762.0" />
+                                 </content>
+                              </Tab>
+                            <Tab text="Statistics">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart prefHeight="400.0" prefWidth="390.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis label="\%" side="LEFT" upperBound="90.0" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart layoutX="365.0" prefHeight="400.0" prefWidth="390.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" upperBound="200.0" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <Circle fill="#ff1f1f" layoutX="25.0" layoutY="430.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                                          <Circle fill="#47fc00" layoutX="495.0" layoutY="430.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                                          <Circle fill="DODGERBLUE" layoutX="624.0" layoutY="430.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                                          <Label layoutX="45.0" layoutY="421.0" text="Average Density" />
+                                          <Label layoutX="513.0" layoutY="421.0" text="Average Speed" />
+                                          <Label layoutX="641.0" layoutY="421.0" prefHeight="17.0" prefWidth="79.0" text="Vehicle Count" />
+                                          <ComboBox layoutX="311.0" layoutY="417.0" prefHeight="25.0" prefWidth="133.0" promptText="Density Per Edge" />
+                                          <Label fx:id="StatsEdgeLabel" layoutX="147.0" layoutY="417.0" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: white;" />
+                                          <Label layoutX="144.0" layoutY="396.0" text="Currently Displaying Edge:" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+        <AnchorPane>
+          <children>
+            <Label alignment="CENTER" font="$x1" layoutX="77.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <Label layoutX="61.0" layoutY="89.0" text="Active Vehicles: " />
+                  <Label fx:id="VehicleCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="115.0" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: white;" textAlignment="CENTER" />
+                  <Label layoutX="43.0" layoutY="176.0" text="Congestion Hotspots:" />
+                  <Label fx:id="CongestionHotspotsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="209.0" prefHeight="86.0" prefWidth="115.0" style="-fx-background-color: white;" textAlignment="CENTER" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>

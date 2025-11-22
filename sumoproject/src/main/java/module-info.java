@@ -1,4 +1,4 @@
-module de.frauas {
+module main {
     //needed for JavaFX 
     requires javafx.controls;
     requires javafx.fxml;
@@ -9,7 +9,7 @@ module de.frauas {
 
     requires java.logging;
     
-    opens de.frauas to javafx.fxml;
-    exports de.frauas;
-    exports main;
+    exports main to javafx.graphics;
+    opens main to javafx.fxml;
+
 }
